@@ -38,6 +38,10 @@ kotlin {
                 //Share Buttons (chapter 7)
                 implementation(npm("react-share", "4.4.1"))
 
+
+                // material ui
+                implementation("org.jetbrains.kotlin-wrappers:kotlin-mui")
+
                 //Coroutines & serialization (chapter 8)
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0")

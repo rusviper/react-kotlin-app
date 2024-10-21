@@ -4,7 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7a406af-cf6c-45e0-ab77-6865e0f7df9b" name="Changes" comment="" />
+    <list default="true" id="c7a406af-cf6c-45e0-ab77-6865e0f7df9b" name="Changes" comment="Исправлен путь до исходников">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/react_kotlin_app_js_1_0_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jsMain/kotlin/api/ApiServer.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jsMain/kotlin/api/Request.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jsMain/kotlin/components/App.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jsMain/kotlin/components/InputField.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jsMain/kotlin/components/InputForm.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jsMain/kotlin/components/JiraWorklogForm.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jsMain/kotlin/components/MyButton.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jsMain/kotlin/components/Welcome.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jsMain/kotlin/config/AppConfig.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jsMain/kotlin/data/InputData.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-js-store/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-js-store/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jsMain/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jsMain/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jsMain/resources/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/jsMain/resources/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,12 +36,63 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="react-kotlin-app" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="react-kotlin-app" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="react-kotlin-app" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="react-kotlin-app" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="kotlin browser" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="react-kotlin-app" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="nodejs" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+        <option value="Kotlin File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2nDE7M4VE81mjhUGXV2sM9rSnDM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -29,14 +101,188 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.Build react-kotlin-app.executor": "Run",
+    "Gradle.react-kotlin-app [cleanAllTests].executor": "Run",
+    "Gradle.react-kotlin-app [clean].executor": "Run",
+    "Gradle.react-kotlin-app [jsBrowserDevelopmentRun].executor": "Run",
+    "Gradle.react-kotlin-app [jsBrowserDevelopmentWebpack].executor": "Run",
+    "Gradle.react-kotlin-app [jsBrowserProductionWebpack].executor": "Run",
+    "Gradle.react-kotlin-app [jsBrowserRun].executor": "Debug",
+    "Gradle.react-kotlin-app [jsBrowserWebpack].executor": "Run",
+    "Gradle.react-kotlin-app [jsRun].executor": "Run",
+    "Gradle.react-kotlin-app [kotlinUpgradeYarnLock].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.codeium.enabled": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "kotlin-gradle-user-dirs": [
+      "/home/rusviper/.gradle"
+    ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/jsMain/kotlin/data" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="gradle jsBrowserDevelopmentRun" />
+      <command value="gradle jsRun" />
+      <command value="gradle kotlinUpgradeYarnLock" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Gradle.react-kotlin-app [jsBrowserDevelopmentRun]">
+    <configuration name="react-kotlin-app [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="react-kotlin-app [jsBrowserDevelopmentRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--continuous" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jsBrowserDevelopmentRun" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="react-kotlin-app [jsBrowserDevelopmentWebpack]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jsBrowserDevelopmentWebpack" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="react-kotlin-app [jsBrowserRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jsBrowserRun" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="react-kotlin-app [jsBrowserWebpack]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jsBrowserWebpack" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="lua.app" factoryName="Lua Application">
+      <option name="program" value="lua" />
+      <option name="file" value="" />
+      <option name="workingDir" value="$PROJECT_DIR$/src/main/kotlin" />
+      <option name="debuggerType" value="2" />
+      <option name="params" value="" />
+      <option name="charset" value="UTF-8" />
+      <option name="showConsole" value="true" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.react-kotlin-app [clean]" />
+      <item itemvalue="Gradle.react-kotlin-app [jsBrowserDevelopmentWebpack]" />
+      <item itemvalue="Gradle.react-kotlin-app [jsBrowserRun]" />
+      <item itemvalue="Gradle.react-kotlin-app [jsBrowserWebpack]" />
+      <item itemvalue="Gradle.react-kotlin-app [jsBrowserDevelopmentRun]" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.react-kotlin-app [jsBrowserDevelopmentRun]" />
+        <item itemvalue="Gradle.react-kotlin-app [jsBrowserRun]" />
+        <item itemvalue="Gradle.react-kotlin-app [clean]" />
+        <item itemvalue="Gradle.react-kotlin-app [jsBrowserWebpack]" />
+        <item itemvalue="Gradle.react-kotlin-app [jsBrowserDevelopmentWebpack]" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -53,11 +299,45 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728499080489</updated>
-      <workItem from="1728499081532" duration="1000" />
+      <workItem from="1728499081532" duration="7789000" />
+      <workItem from="1729156703202" duration="44417000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit&#10;readme">
+      <option name="closed" value="true" />
+      <created>1728500131759</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1728500131759</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Исправлен путь до исходников">
+      <option name="closed" value="true" />
+      <created>1728500560233</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728500560233</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit&#10;readme" />
+    <MESSAGE value="Исправлен путь до исходников" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлен путь до исходников" />
   </component>
 </project>
