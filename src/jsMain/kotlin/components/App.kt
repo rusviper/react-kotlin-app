@@ -3,6 +3,8 @@ package components
 import data.loadConfig
 import react.*
 import react.Props
+import react.dom.html.ReactHTML.p
+import react.dom.html.ReactHTML.h2
 import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.button
 import react.useState
@@ -46,6 +48,24 @@ val App = FC<AppProps> { appProps ->
     }
 }
 
+
+fun ChildrenBuilder.showMode2() {
+    val config = loadConfig()
+    JiraEnterWorklogForm {
+        defaultParameters = null    // отображаются плейсхолдеры
+        appConfig = config
+    }
+    div {
+        h2 {
+            + "Статус соединения с Jira"
+        }
+        CheckJiraStatus {
+            appConfig = config
+        }
+    }
+}
+
+// по документации не желательно использовать ChildrenBuilder таким образом
 fun ChildrenBuilder.showMode1() {
     div {
         WelcomeComponent()
@@ -60,13 +80,6 @@ fun ChildrenBuilder.showMode1() {
         }
     }
 
-}
-
-fun ChildrenBuilder.showMode2() {
-        JiraEnterWorklogForm {
-            defaultParameters = InputParameters(0, "")
-            appConfig = loadConfig()
-        }
 }
 
 val counter = FC<Props> {

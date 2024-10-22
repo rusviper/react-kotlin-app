@@ -1,6 +1,7 @@
 package components
 
-import api.makeRequestWithData
+import api.OutputError
+import tools.makeRequestWithData
 import data.AppConfig
 import csstype.*
 import emotion.react.css
@@ -15,12 +16,10 @@ import react.dom.html.ReactHTML.p
 import react.dom.html.ReactHTML.h1
 import react.useEffect
 import react.useState
+import tools.Logger
+import tools.readJson
+import kotlin.js.Date
 
-
-private val debugLogging = false
-private fun consoleLog(message: String) {
-    if (debugLogging) console.log(message)
-}
 
 // region data
 
@@ -30,7 +29,7 @@ data class InputParameters(val expectedCount: Int, val worklogText: String)
 @Serializable
 data class OutputParameters(val rowsCount: Int)
 
-data class OutputError(val message: String, val error: Throwable?)
+
 
 // endregion
 
@@ -44,12 +43,12 @@ external interface FormParametersProps : Props {
 
 
 val JiraEnterWorklogForm = FC<FormParametersProps>("InputParametersForm") { rootProps ->
-    val debugLogging = false
-    var inputParameters by useState(rootProps.defaultParameters ?: InputParameters(0, ""))
+    var inputParameters by useState(rootProps.defaultParameters?: InputParameters(0, ""))
     var outputParameters by useState(null as OutputParameters?)
     var errorParameters by useState(null as OutputError?)
     var queryActive by useState(false)
     var inputParamsUpdated by useState(false)
+    var lastUpdateTime by useState(null as Date?)
 
     useEffect(inputParamsUpdated) {
         // если обновлено - это вводятся значения
@@ -58,7 +57,7 @@ val JiraEnterWorklogForm = FC<FormParametersProps>("InputParametersForm") { root
 
         // если "не обновлено" - значит сброшено значение флага и нужно обновить
         queryActive = true
-        consoleLog("useEffect: inputParameters=${inputParameters}")
+        Logger.debug("useEffect: inputParameters=${inputParameters}")
 
         val job = makeRequestWithData(rootProps.appConfig, "/text/check", inputParameters,
             onError = {
@@ -67,8 +66,9 @@ val JiraEnterWorklogForm = FC<FormParametersProps>("InputParametersForm") { root
             onFinally = {
                 queryActive = false
             }) {
-            outputParameters = Json.decodeFromString(it)
+            outputParameters = readJson(it)
             errorParameters = null
+            lastUpdateTime = Date()
         }
 
         cleanup {
@@ -77,15 +77,16 @@ val JiraEnterWorklogForm = FC<FormParametersProps>("InputParametersForm") { root
     }
 
     ParametersInputs {
+        defaultParameters = inputParameters
         onChangeExpectedCount = {
             inputParameters = inputParameters.copy(expectedCount = it)
             inputParamsUpdated = true
-            consoleLog("onChangeExpectedCount: inputParameters=${inputParameters}, expectedCount=${it}")
+            Logger.debug("onChangeExpectedCount: inputParameters=${inputParameters}, expectedCount=${it}")
         }
         onChangeWorklogText = {
             inputParameters = inputParameters.copy(worklogText = it)    // выполняет setState, но не присвоение?
             inputParamsUpdated = true
-            consoleLog("onChangeWorklogText: inputParameters=${inputParameters}, text=${it}")
+            Logger.debug("onChangeWorklogText: inputParameters=${inputParameters}, text=${it}")
         }
     }
 
@@ -104,11 +105,13 @@ val JiraEnterWorklogForm = FC<FormParametersProps>("InputParametersForm") { root
        this.queryActive = queryActive
        this.outputParameters = outputParameters
        this.errorParameters = errorParameters
+       this.lastUpdateTime = lastUpdateTime
    }
 
 }
 
 external interface InputParametersProps : Props {
+    var defaultParameters: InputParameters?
     var onChangeExpectedCount: (Int) -> Unit
     var onChangeWorklogText: (String) -> Unit
 }
@@ -132,7 +135,8 @@ val ParametersInputs = FC<InputParametersProps> { props ->
 
                 InputField {
                     name = "Введите ожидаемое количество записей"
-                    defaultValue = 0.toString()
+                    placeholder = "Например, 10"
+                    defaultValue = props.defaultParameters?.expectedCount?.toString()
                     onChange = {
                         props.onChangeExpectedCount.invoke(it.toInt())
                     }
@@ -145,9 +149,9 @@ val ParametersInputs = FC<InputParametersProps> { props ->
                 // слева ввод ворклога
                 MultiLineInputField {
                     name = "Введите текст ворклога"
-                    defaultValue = "---"
+                    placeholder = "Например, \n1 - 10123: писал тесты"
+                    defaultValue = props.defaultParameters?.worklogText
                     onChange = {
-                        console.log("onChangeWorklogText: it=$it")
                         props.onChangeWorklogText.invoke(it)
                     }
                 }
@@ -174,7 +178,7 @@ val QueryButtons = FC<QueryParametersProps> { props ->
 
         div {
             css {
-
+                marginLeft = 50.px
             }
             // справа кнопка "проверить"
             myButton {
@@ -186,6 +190,9 @@ val QueryButtons = FC<QueryParametersProps> { props ->
             }
         }
         div {
+            css {
+                marginLeft = 50.px
+            }
             // слева кнопка "отправить"
             myButton {
                 text = "Отправить"
@@ -201,6 +208,7 @@ external interface ResultFieldsProps : Props {
     var errorParameters: OutputError?
     var outputParameters: OutputParameters?
     var queryActive: Boolean
+    var lastUpdateTime: Date?
 }
 
 val ResultFields = FC<ResultFieldsProps> { props ->
@@ -229,7 +237,7 @@ val ResultFields = FC<ResultFieldsProps> { props ->
             // список параметров с результатами
             p {
                 val resultsString = if (props.outputParameters == null)
-                    "Нет данных"
+                    "Данные ещё не были получены"
                 else
                     props.outputParameters!!.toString()
                 + resultsString
@@ -245,7 +253,7 @@ val ResultFields = FC<ResultFieldsProps> { props ->
             }
         } else {
             p {
-                + "Спиннер скрыт"
+                + "Последняя дата обновления: ${props.lastUpdateTime?:"-"}"
             }
         }
     }

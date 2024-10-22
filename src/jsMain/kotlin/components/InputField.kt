@@ -10,7 +10,8 @@ import react.dom.html.ReactHTML.p
 external interface InputFieldProps : Props {
     var name: String
     var value: String
-    var defaultValue: String
+    var defaultValue: String?
+    var placeholder: String?
     var onChange: (String) -> Unit
 }
 
@@ -19,6 +20,7 @@ val InputField = FC<InputFieldProps> { props ->
         + "${props.name}: "
     }
     Input {
+        placeholder = props.placeholder
         defaultValue = props.defaultValue
         onChange = {
             val newValue = (it.target as HTMLInputElement).value
@@ -35,7 +37,8 @@ val MultiLineInputField = FC<InputFieldProps> { props ->
     Input {
         multiline = true
         minRows = 3
-        placeholder = props.defaultValue
+        placeholder = props.placeholder
+        defaultValue = props.defaultValue
 
         onChange = {
             value = (it.target as HTMLTextAreaElement).value

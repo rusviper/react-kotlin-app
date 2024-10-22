@@ -4,16 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7a406af-cf6c-45e0-ab77-6865e0f7df9b" name="Changes" comment="Выполнение запросов на локальный сервер. Проба пера">
-      <change afterPath="$PROJECT_DIR$/src/jsMain/kotlin/data/Serialization.kt" afterDir="false" />
+    <list default="true" id="c7a406af-cf6c-45e0-ab77-6865e0f7df9b" name="Changes" comment="Работает запрос на проверку, опциональное логирование">
+      <change afterPath="$PROJECT_DIR$/src/jsMain/kotlin/components/CheckJiraStatus.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jsMain/kotlin/tools/Logging.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jsMain/kotlin/api/ApiServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jsMain/kotlin/api/ApiServer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jsMain/kotlin/api/Request.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jsMain/kotlin/api/Request.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jsMain/kotlin/api/ApiServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jsMain/kotlin/api/ServerApi.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jsMain/kotlin/api/Request.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jsMain/kotlin/tools/Request.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jsMain/kotlin/components/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jsMain/kotlin/components/App.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jsMain/kotlin/components/InputField.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jsMain/kotlin/components/InputField.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jsMain/kotlin/components/JiraWorklogForm.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jsMain/kotlin/components/JiraWorklogForm.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jsMain/kotlin/components/MyButton.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jsMain/kotlin/components/MyButton.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jsMain/kotlin/config/AppConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jsMain/kotlin/data/AppConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jsMain/kotlin/data/Serialization.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jsMain/kotlin/tools/Serialization.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,8 +71,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin File" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -124,6 +124,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/jsMain/kotlin/tools" />
       <recent name="$PROJECT_DIR$/src/jsMain/kotlin/data" />
     </key>
   </component>
@@ -289,7 +290,7 @@
       <option name="presentableId" value="Default" />
       <updated>1728499080489</updated>
       <workItem from="1728499081532" duration="7789000" />
-      <workItem from="1729156703202" duration="50204000" />
+      <workItem from="1729156703202" duration="57224000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit&#10;readme">
       <option name="closed" value="true" />
@@ -315,7 +316,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729547537956</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Работает запрос на проверку, опциональное логирование">
+      <option name="closed" value="true" />
+      <created>1729580719370</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1729580719370</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,6 +345,7 @@
     <MESSAGE value="Initial commit&#10;readme" />
     <MESSAGE value="Исправлен путь до исходников" />
     <MESSAGE value="Выполнение запросов на локальный сервер. Проба пера" />
-    <option name="LAST_COMMIT_MESSAGE" value="Выполнение запросов на локальный сервер. Проба пера" />
+    <MESSAGE value="Работает запрос на проверку, опциональное логирование" />
+    <option name="LAST_COMMIT_MESSAGE" value="Работает запрос на проверку, опциональное логирование" />
   </component>
 </project>

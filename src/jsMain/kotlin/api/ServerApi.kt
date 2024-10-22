@@ -8,3 +8,5 @@ package api
 //        return response
 //    }
 //}
+
+data class OutputError(val message: String, val error: Throwable?)
