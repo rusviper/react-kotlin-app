@@ -1,6 +1,7 @@
 package components
 
 import dom.html.HTMLInputElement
+import dom.html.HTMLTextAreaElement
 import mui.material.Input
 import react.FC
 import react.Props
@@ -28,19 +29,16 @@ val InputField = FC<InputFieldProps> { props ->
 }
 
 val MultiLineInputField = FC<InputFieldProps> { props ->
-
-    //var value by useState(props.defaultValue)
-
     p {
         + "${props.name}: "
     }
     Input {
         multiline = true
-        rows = 10
-        defaultValue = props.defaultValue
+        minRows = 3
+        placeholder = props.defaultValue
 
         onChange = {
-            value = (it.target as HTMLInputElement).value
+            value = (it.target as HTMLTextAreaElement).value
             if (props.onChange != null)
                 props.onChange(value)
         }

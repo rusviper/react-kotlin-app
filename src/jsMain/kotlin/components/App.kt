@@ -1,9 +1,8 @@
 package components
 
-import config.loadConfig
+import data.loadConfig
 import react.*
 import react.Props
-import react.dom.html.ReactHTML.h1
 import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.button
 import react.useState

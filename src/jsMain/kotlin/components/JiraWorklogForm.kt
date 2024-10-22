@@ -1,9 +1,12 @@
 package components
 
 import api.makeRequestWithData
-import config.AppConfig
+import data.AppConfig
 import csstype.*
 import emotion.react.css
+import kotlinx.serialization.Serializable
+import kotlinx.serialization.decodeFromString
+import kotlinx.serialization.json.Json
 import mui.material.CircularProgress
 import react.FC
 import react.Props
@@ -14,10 +17,17 @@ import react.useEffect
 import react.useState
 
 
+private val debugLogging = false
+private fun consoleLog(message: String) {
+    if (debugLogging) console.log(message)
+}
+
 // region data
 
 // server models
+@Serializable
 data class InputParameters(val expectedCount: Int, val worklogText: String)
+@Serializable
 data class OutputParameters(val rowsCount: Int)
 
 data class OutputError(val message: String, val error: Throwable?)
@@ -34,7 +44,7 @@ external interface FormParametersProps : Props {
 
 
 val JiraEnterWorklogForm = FC<FormParametersProps>("InputParametersForm") { rootProps ->
-
+    val debugLogging = false
     var inputParameters by useState(rootProps.defaultParameters ?: InputParameters(0, ""))
     var outputParameters by useState(null as OutputParameters?)
     var errorParameters by useState(null as OutputError?)
@@ -47,9 +57,8 @@ val JiraEnterWorklogForm = FC<FormParametersProps>("InputParametersForm") { root
             return@useEffect
 
         // если "не обновлено" - значит сброшено значение флага и нужно обновить
-
         queryActive = true
-        console.log("useEffect: inputParameters=${inputParameters}")
+        consoleLog("useEffect: inputParameters=${inputParameters}")
 
         val job = makeRequestWithData(rootProps.appConfig, "/text/check", inputParameters,
             onError = {
@@ -58,7 +67,7 @@ val JiraEnterWorklogForm = FC<FormParametersProps>("InputParametersForm") { root
             onFinally = {
                 queryActive = false
             }) {
-            outputParameters = JSON.parse(it)
+            outputParameters = Json.decodeFromString(it)
             errorParameters = null
         }
 
@@ -71,12 +80,12 @@ val JiraEnterWorklogForm = FC<FormParametersProps>("InputParametersForm") { root
         onChangeExpectedCount = {
             inputParameters = inputParameters.copy(expectedCount = it)
             inputParamsUpdated = true
-            console.log("onChangeExpectedCount: inputParameters=${inputParameters}")
+            consoleLog("onChangeExpectedCount: inputParameters=${inputParameters}, expectedCount=${it}")
         }
         onChangeWorklogText = {
-            inputParameters = inputParameters.copy(worklogText = it)
+            inputParameters = inputParameters.copy(worklogText = it)    // выполняет setState, но не присвоение?
             inputParamsUpdated = true
-            console.log("onChangeWorklogText: inputParameters=${inputParameters}")
+            consoleLog("onChangeWorklogText: inputParameters=${inputParameters}, text=${it}")
         }
     }
 
@@ -138,6 +147,7 @@ val ParametersInputs = FC<InputParametersProps> { props ->
                     name = "Введите текст ворклога"
                     defaultValue = "---"
                     onChange = {
+                        console.log("onChangeWorklogText: it=$it")
                         props.onChangeWorklogText.invoke(it)
                     }
                 }
@@ -218,8 +228,11 @@ val ResultFields = FC<ResultFieldsProps> { props ->
         div {
             // список параметров с результатами
             p {
-                val resultsString = props.outputParameters?:"Нет данных"
-                + "${resultsString}"
+                val resultsString = if (props.outputParameters == null)
+                    "Нет данных"
+                else
+                    props.outputParameters!!.toString()
+                + resultsString
             }
         }
         if (props.queryActive) {

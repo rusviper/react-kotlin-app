@@ -4,27 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7a406af-cf6c-45e0-ab77-6865e0f7df9b" name="Changes" comment="Исправлен путь до исходников">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/react_kotlin_app_js_1_0_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jsMain/kotlin/api/ApiServer.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jsMain/kotlin/api/Request.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jsMain/kotlin/components/App.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jsMain/kotlin/components/InputField.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jsMain/kotlin/components/InputForm.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jsMain/kotlin/components/JiraWorklogForm.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jsMain/kotlin/components/MyButton.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jsMain/kotlin/components/Welcome.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jsMain/kotlin/config/AppConfig.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jsMain/kotlin/data/InputData.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="c7a406af-cf6c-45e0-ab77-6865e0f7df9b" name="Changes" comment="Выполнение запросов на локальный сервер. Проба пера">
+      <change afterPath="$PROJECT_DIR$/src/jsMain/kotlin/data/Serialization.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-js-store/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-js-store/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jsMain/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jsMain/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jsMain/resources/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/jsMain/resources/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jsMain/kotlin/api/ApiServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jsMain/kotlin/api/ApiServer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jsMain/kotlin/api/Request.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jsMain/kotlin/api/Request.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jsMain/kotlin/components/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jsMain/kotlin/components/App.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jsMain/kotlin/components/InputField.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jsMain/kotlin/components/InputField.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jsMain/kotlin/components/JiraWorklogForm.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jsMain/kotlin/components/JiraWorklogForm.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jsMain/kotlin/components/MyButton.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jsMain/kotlin/components/MyButton.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jsMain/kotlin/config/AppConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jsMain/kotlin/data/AppConfig.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,8 +71,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Class" />
         <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -300,7 +289,7 @@
       <option name="presentableId" value="Default" />
       <updated>1728499080489</updated>
       <workItem from="1728499081532" duration="7789000" />
-      <workItem from="1729156703202" duration="44417000" />
+      <workItem from="1729156703202" duration="50204000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit&#10;readme">
       <option name="closed" value="true" />
@@ -318,7 +307,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728500560233</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Выполнение запросов на локальный сервер. Проба пера">
+      <option name="closed" value="true" />
+      <created>1729547537956</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729547537956</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,6 +335,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit&#10;readme" />
     <MESSAGE value="Исправлен путь до исходников" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлен путь до исходников" />
+    <MESSAGE value="Выполнение запросов на локальный сервер. Проба пера" />
+    <option name="LAST_COMMIT_MESSAGE" value="Выполнение запросов на локальный сервер. Проба пера" />
   </component>
 </project>
